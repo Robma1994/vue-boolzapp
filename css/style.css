@@ -1,1 +1,36 @@
-/*Collegato*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Common*/
+
+/*Fine Common*/
+
+/*Background*/
+.background {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#009688 20%, #d5dbd9 20%);
+    position: relative;
+}
+/*Fine Background*/
+
+/*CONTAINER*/
+.container {
+    width: 80%;
+    height: 90%;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Container left*/
+/*Fine Container left*/
+
+/*Container right*/
+/*Fine Container right*/
+
+
+/*FINE CONTAINER*/
