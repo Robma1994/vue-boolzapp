@@ -31,23 +31,77 @@
     display: table;
     clear: both;
 }
-/*Container left*/
-.container-left {
+/* INIZIO NAV LEFT*/
+.nav-left {
     width: 400px;
     height: 100%;
     float: left;
     background-color: yellow;
 }
-/*Fine Container left*/
+/*Identifier*/
+.identifier {
+    width: 100%;
+    height: 70px;
+    background-color: goldenrod;
+}
+/*Fine Identifier*/
 
-/*Container right*/
-.container-right {
+/*Notifications*/
+.notifications {
+    width: 100%;
+    height: 70px;
+    background-color: indianred;
+}
+/*Fine Notifications*/
+
+/*Research*/
+.research {
+    width: 100%;
+    height: 70px;
+    background-color: yellowgreen;
+}
+/*Fine Research*/
+
+/*Chat*/
+.chat {
+    width: 100%;
+    height: calc(100% - 210px);
+    background-color: purple;
+}
+/*Fine Chat*/
+/*FINE NAV LEFT*/
+
+/*INIZIO SECTION OPEN CHAT*/
+.section-open-chat {
     width: calc(100% - 400px);
     height: 100%;
     float: right;
     background-color: red;
-}     
-/*Fine Container right*/
+}
+/*Open chat User*/   
+.open-chat-user {
+    width: 100%;
+    height: 70px;
+    background-color: slateblue;
+}
+/*Chat message*/
+.chat-message {
+    width: 100%;
+    height: calc(100% - (70px + 70px));
+    background-color: aqua;
+}
+/*Fine Chat message*/
+
+/*Message enter*/
+.message-enter {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+}
+/*Fine Message enter*/
+
+/*Fine open chat User*/     
+/*FINE SECTION OPEN CHAT*/
 
 
 /*FINE CONTAINER*/
