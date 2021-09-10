@@ -20,16 +20,33 @@
 .container {
     width: 80%;
     height: 90%;
-    background-color: red;
+    background-color: green;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 /*Container left*/
+.container-left {
+    width: 400px;
+    height: 100%;
+    float: left;
+    background-color: yellow;
+}
 /*Fine Container left*/
 
 /*Container right*/
+.container-right {
+    width: calc(100% - 400px);
+    height: 100%;
+    float: right;
+    background-color: red;
+}     
 /*Fine Container right*/
 
 
