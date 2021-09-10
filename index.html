@@ -28,24 +28,33 @@
                 </div>
 <!--NOTIFICHE-->
                 <div class="notifications">
-                    notifiche
+                    
                 </div>
 <!--RICERCA CHAT-->
                 <div class="research">
-                    ricerca
+                    <button>
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
 <!--CHAT-->
                 <div class="chat">
-    
+                    <ul v-for="(contact, index) in contacts">
+                        <li>
+                            <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                            <span>{{contact.name}}</span>
+                        </li>
+                        
+                    </ul>
                 </div>
             </nav>
 <!--OPEN CHAT-->
             <section class="section-open-chat">
                 <div class="open-chat-user">
-
+                    
                 </div>
                 <div class="chat-message">
-
+                    
                 </div>
                 <div class="message-enter">
                     
