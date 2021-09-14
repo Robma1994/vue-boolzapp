@@ -180,6 +180,11 @@
     margin: 5px 40px;
     border-radius: 10px 10px;
 }
+.data{
+    font-size: 10px;
+    text-align: right;
+    margin-top: 5px;
+}
 /*Fine Chat message*/
 
 /*Message enter*/

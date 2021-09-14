@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>BoolZapp</title>
 </head>
@@ -64,7 +65,7 @@
                     <div v-for="(contact,index) in contacts[contatore].messages">
                         <div :class="(contact.status == 'sent') ? 'message-sent ': 'message-received'">
                             <p>{{contact.message}}</p>
-                            <p>{{contact.date}}</p>
+                            <p class="data">{{contact.date}}</p>
                         </div> 
                     </div>
                 </div>

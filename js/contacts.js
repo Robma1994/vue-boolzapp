@@ -106,7 +106,7 @@ const app = new Vue(
             pushMessageEnter(){
                 if(this.messageUserEnter != ""){
                    let messageSent = this.contacts[this.contatore].messages;
-                   messageSent.push({message: this.messageUserEnter, status: 'sent'})
+                   messageSent.push({message: this.messageUserEnter, status: 'sent', date: dayjs().format("DD/MM/YY hh:mm:ss") })
                    this.messageUserEnter = "" 
                 }
             }
