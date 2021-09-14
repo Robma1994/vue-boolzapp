@@ -107,9 +107,19 @@ const app = new Vue(
                 if(this.messageUserEnter != ""){
                    let messageSent = this.contacts[this.contatore].messages;
                    messageSent.push({message: this.messageUserEnter, status: 'sent', date: dayjs().format("DD/MM/YY hh:mm:ss") })
-                   this.messageUserEnter = "" 
+                   this.messageUserEnter = "" ;
+                   setTimeout(() =>{
+                    let messageSent = this.contacts[this.contatore].messages;
+                    messageSent.push({message: "ok", status: 'received', date: dayjs().format("DD/MM/YY hh:mm:ss") })
+                   }, 3000)
                 }
-            }
-        }
+            },
+        }        
     }
 )
+
+
+
+
+
+

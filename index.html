@@ -44,6 +44,7 @@
                         <li @click="userChat(index)">
                             <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                             <span>{{contact.name}}</span>
+                            
                         </li>
                     </ul>
                 </div>
@@ -66,6 +67,7 @@
                         <div :class="(contact.status == 'sent') ? 'message-sent ': 'message-received'">
                             <p>{{contact.message}}</p>
                             <p class="data">{{contact.date}}</p>
+                            
                         </div> 
                     </div>
                 </div>
