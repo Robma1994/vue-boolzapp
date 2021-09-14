@@ -8,6 +8,7 @@ const app = new Vue(
             cognome: "Martino",
             contatore: 0,
             messageUserEnter: "",
+            staScrivendo: "",
             contacts: [
                 //Oggetto 1
                 {
@@ -108,10 +109,12 @@ const app = new Vue(
                    let messageSent = this.contacts[this.contatore].messages;
                    messageSent.push({message: this.messageUserEnter, status: 'sent', date: dayjs().format("DD/MM/YY hh:mm:ss") })
                    this.messageUserEnter = "" ;
+                   this.staScrivendo = "sta scrivendo";
                    setTimeout(() =>{
-                    let messageSent = this.contacts[this.contatore].messages;
-                    messageSent.push({message: "ok", status: 'received', date: dayjs().format("DD/MM/YY hh:mm:ss") })
-                   }, 3000)
+                        let messageSent = this.contacts[this.contatore].messages;
+                        messageSent.push({message: "ok", status: 'received', date: dayjs().format("DD/MM/YY hh:mm:ss") })
+                        this.staScrivendo = "";
+                    }, 3000)
                 }
             },
         }        

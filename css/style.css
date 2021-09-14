@@ -163,6 +163,12 @@
     display: flex;
     align-items: center;
 }
+.container-user .nameUser {
+    font-size: 18px;
+}
+.container-user .write {
+    font-size: 10px;
+}
 /*Chat message*/
 .chat-message {
     width: 100%;

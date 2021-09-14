@@ -56,7 +56,11 @@
                 <div class="open-chat-user">
                     <div class="container-user">
                         <img :src="'img/avatar' + contacts[contatore].avatar + '.jpg'" alt="">
-                        <span>{{contacts[contatore].name}}</span>
+                        <div>
+                            <span class="nameUser">{{contacts[contatore].name}}</span>
+                            <p class="write">{{staScrivendo}}</p>
+                        </div>
+                        
                     </div>
                     <div class="container-font-awesome">
                         <i class="fas fa-search" style="color:gray"></i>
@@ -69,7 +73,6 @@
                         <div :class="(contact.status == 'sent') ? 'message-sent ': 'message-received'">
                             <p>{{contact.message}}</p>
                             <p class="data">{{contact.date}}</p>
-                            
                         </div> 
                     </div>
                 </div>
