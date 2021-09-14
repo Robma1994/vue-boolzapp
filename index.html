@@ -73,7 +73,7 @@
                         <i class="far fa-smile-beam"></i>
                     </div>
                     <div class="click-message-enter">
-                        <input type="text" placeholder="Scrivi messaggio">
+                        <input type="text" placeholder="Scrivi messaggio" v-model="messageUserEnter" @keyUp.enter="pushMessageEnter">
                     </div>
                     <div class="microphone">
                         <i class="fas fa-microphone"></i>

@@ -7,6 +7,7 @@ const app = new Vue(
             nome: "Roberto",
             cognome: "Martino",
             contatore: 0,
+            messageUserEnter: "",
             contacts: [
                 //Oggetto 1
                 {
@@ -101,6 +102,13 @@ const app = new Vue(
         methods: {
             userChat(index) {
                 this.contatore = index;
+            },
+            pushMessageEnter(){
+                if(this.messageUserEnter != ""){
+                   let messageSent = this.contacts[this.contatore].messages;
+                   messageSent.push({message: this.messageUserEnter, status: 'sent'})
+                   this.messageUserEnter = "" 
+                }
             }
         }
     }
