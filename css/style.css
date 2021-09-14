@@ -128,7 +128,15 @@
     display: flex;
     align-items: center;
 }
-
+.chat ul li div.name-avatar {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+.chat ul li div.name-avatar > span.last-message{
+    font-size: 15px;
+    color: gray;
+}
 .chat ul li img {
     width: 10%;
 }

@@ -43,8 +43,10 @@
                     <ul v-for="(contact, index) in contacts">
                         <li @click="userChat(index)">
                             <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
-                            <span>{{contact.name}}</span>
-                            
+                            <div class="name-avatar">
+                                <span>{{contact.name}}</span>
+                                <span class="last-message">{{contact.messages[contact.messages.length - 1].message}}</span>
+                            </div>
                         </li>
                     </ul>
                 </div>
