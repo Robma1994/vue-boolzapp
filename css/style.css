@@ -8,6 +8,10 @@
 .p-right {
     padding-right: 10px;
 }
+.padding {
+    padding: 10px;
+}
+
 /*Fine Padding*/
 /*Fine Common*/
 
@@ -57,15 +61,16 @@
 .container-font-awesome {
     width: calc(100% - 220px);
     height: 100%;
-    justify-content: end;
+    display: flex;
+    justify-content: flex-end;
 }
-.container-avatar > img {
+.container-avatar > img, .container-user > img {
     margin: 10px 10px;
     width: 45px;
     height: 45px;
     border-radius: 50% 50%;
 }
-.identifier .container-name, .identifier .container-font-awesome {
+.identifier .container-name, .identifier .container-font-awesome, .open-chat-user .container-font-awesome {
     display: flex;
     align-items: center;
 }
@@ -140,21 +145,76 @@
     width: 100%;
     height: 50px;
     background-color: #eaeaea;
+    display: flex;
+    justify-content:flex-end;
+}
+.container-user {
+    width: 220px;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 /*Chat message*/
 .chat-message {
     width: 100%;
     height: calc(100% - (60px + 50px));
     background-image: url("../img/mine.jpg");
+    overflow-y: scroll; 
 }
 
+.message-received {
+    float: left;
+    clear: both;
+    background-color: whitesmoke;
+    width: 260px;
+    padding: 10px 10px;
+    margin: 5px 40px;
+    border-radius: 10px 10px;
+}
+.message-sent {
+    float: right;
+    clear: both;
+    background-color: green;
+    width: 260px;
+    padding: 10px 10px;
+    margin: 5px 40px;
+    border-radius: 10px 10px;
+}
 /*Fine Chat message*/
 
 /*Message enter*/
 .message-enter {
     width: 100%;
     height: 60px;
-    background-color: #eaeaea;
+    background-color: #f3eeea;;
+    display: flex;
+}
+.message-enter .emoticons, .message-enter .microphone {
+    width: 110px;
+    height: 100%;
+    
+}
+.message-enter .click-message-enter {
+    width: calc(100% - 110px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.message-enter .click-message-enter input{
+    width: 100%;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+.message-enter > .microphone, .message-enter > .emoticons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message-enter > .emoticons i , .message-enter > .microphone i{
+    color: grey;
 }
 /*Fine Message enter*/
 

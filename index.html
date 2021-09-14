@@ -40,24 +40,44 @@
 <!--CHAT-->
                 <div class="chat">
                     <ul v-for="(contact, index) in contacts">
-                        <li>
+                        <li @click="userChat(index)">
                             <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                             <span>{{contact.name}}</span>
                         </li>
-                        
                     </ul>
                 </div>
             </nav>
 <!--OPEN CHAT-->
             <section class="section-open-chat">
                 <div class="open-chat-user">
-                    
+                    <div class="container-user">
+                        <img :src="'img/avatar' + contacts[contatore].avatar + '.jpg'" alt="">
+                        <span>{{contacts[contatore].name}}</span>
+                    </div>
+                    <div class="container-font-awesome">
+                        <i class="fas fa-search" style="color:gray"></i>
+                        <i class="fas fa-paperclip" style="color:gray"></i>
+                        <i class="fas fa-ellipsis-v" style="color:gray"></i>
+                    </div>
                 </div>
                 <div class="chat-message">
-                    
+                    <div v-for="(contact,index) in contacts[contatore].messages">
+                        <div :class="(contact.status == 'sent') ? 'message-sent ': 'message-received'">
+                            <p>{{contact.message}}</p>
+                            <p>{{contact.date}}</p>
+                        </div> 
+                    </div>
                 </div>
                 <div class="message-enter">
-                    
+                    <div class="emoticons">
+                        <i class="far fa-smile-beam"></i>
+                    </div>
+                    <div class="click-message-enter">
+                        <input type="text" placeholder="Scrivi messaggio">
+                    </div>
+                    <div class="microphone">
+                        <i class="fas fa-microphone"></i>
+                    </div>
                 </div>
             </section>
         </main>
