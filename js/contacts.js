@@ -9,6 +9,7 @@ const app = new Vue(
             contatore: 0,
             messageUserEnter: "",
             staScrivendo: "",
+            searchChat: "",
             contacts: [
                 //Oggetto 1
                 {
@@ -105,18 +106,40 @@ const app = new Vue(
                 this.contatore = index;
             },
             pushMessageEnter(){
+                let newContatore = this.contatore
                 if(this.messageUserEnter != ""){
                    let messageSent = this.contacts[this.contatore].messages;
                    messageSent.push({message: this.messageUserEnter, status: 'sent', date: dayjs().format("DD/MM/YY hh:mm:ss") })
                    this.messageUserEnter = "" ;
                    this.staScrivendo = "sta scrivendo";
                    setTimeout(() =>{
-                        let messageSent = this.contacts[this.contatore].messages;
+                        let messageSent = this.contacts[newContatore].messages;
                         messageSent.push({message: "ok", status: 'received', date: dayjs().format("DD/MM/YY hh:mm:ss") })
                         this.staScrivendo = "";
                     }, 3000)
                 }
             },
+            cercaPersone(){
+                this.contacts.forEach((element) => {
+                    if(element.name.toLowerCase().includes(this.searchChat.toLowerCase())) {
+                        element.visible = true;
+                    } else {
+                        element.visible = false;
+                    }
+                });
+            }
+            
+            /*
+            cercaPersone(){
+                this.contacts.forEach((element) => {
+                    if(element.name.includes(this.searchChat)) {
+                        element.visible = true;
+                    } else {
+                        element.visible = false;
+                    }
+                });
+            }
+            */
         }        
     }
 )

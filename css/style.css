@@ -120,13 +120,25 @@
     background-color: whitesmoke;
     overflow-y: scroll;
 }
-.chat ul li {
+.filtro {
     border-bottom: 1px solid lightgray;
     list-style-type: none;
     padding-left: 20px;
     height: 70px;
     display: flex;
     align-items: center;
+}
+.hidden {
+    display: none;
+}
+.whitesmoke {
+    background-color: whitesmoke;
+}
+.lightgray {
+    background-color: gray;
+}
+.chat ul li:hover {
+    background-color: rgb(228, 228, 228);
 }
 .chat ul li div.name-avatar {
     display: flex;
@@ -138,7 +150,9 @@
     color: gray;
 }
 .chat ul li img {
-    width: 10%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50% 50%;
 }
 /*Fine Chat*/
 /*FINE NAV LEFT*/
