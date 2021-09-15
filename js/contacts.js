@@ -10,6 +10,8 @@ const app = new Vue(
             messageUserEnter: "",
             staScrivendo: "",
             searchChat: "",
+            windowSettings: "content-settings",
+            windowSettingActive: ["window-active"],
             contacts: [
                 //Oggetto 1
                 {
@@ -127,19 +129,10 @@ const app = new Vue(
                         element.visible = false;
                     }
                 });
+            },
+            changeStatusWindowSettings(){
+                this.windowSettings = "window-active"
             }
-            
-            /*
-            cercaPersone(){
-                this.contacts.forEach((element) => {
-                    if(element.name.includes(this.searchChat)) {
-                        element.visible = true;
-                    } else {
-                        element.visible = false;
-                    }
-                });
-            }
-            */
         }        
     }
 )

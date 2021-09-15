@@ -70,11 +70,20 @@
                 </div>
                 <div class="chat-message">
                     <div v-for="(contact,index) in contacts[contatore].messages">
-                        <div :class="(contact.status == 'sent') ? 'message-sent ': 'message-received'">
-                            <p>{{contact.message}}</p>
+                        <div :class="(contact.status == 'sent') ? 'message-sent ': 'message-received'" class="settings">
+                            <div class="arrow-bottom">
+                                <p class="down">{{contact.message}}</p>
+                                <i class="fas fa-chevron-down" @click="changeStatusWindowSettings"></i>
+                            </div>
                             <p class="data">{{contact.date}}</p>
+                            <div :class="windowSettings">
+                                <ul>
+                                    <li>Info messaggio</li>
+                                    <li>Elimina messaggio</li>
+                                </ul> 
+                            </div>
                         </div> 
-                    </div>
+                    </div>  
                 </div>
                 <div class="message-enter">
                     <div class="emoticons">

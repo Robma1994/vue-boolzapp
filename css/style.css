@@ -188,10 +188,38 @@
     width: 100%;
     height: calc(100% - (60px + 50px));
     background-image: url("../img/mine.jpg");
-    overflow-y: scroll; 
+    overflow-y: scroll;
+}
+.arrow-bottom {
+    display: flex;
+    justify-content: space-between;
 }
 
-.message-received {
+.content-settings {
+    position: absolute;
+    top: 26px;
+    right: -10px;
+    background-color: white;
+    z-index: 9999;
+    display: none;
+}
+.window-active {
+    position: absolute;
+    top: 26px;
+    right: -10px;
+    background-color: white;
+    z-index: 9999;
+    display: block;
+    padding: 10px;
+    
+}
+.no-point {
+    list-style-type: none; 
+}
+.settings {
+    position: relative;
+}
+.message-received { 
     float: left;
     clear: both;
     background-color: whitesmoke;
@@ -203,7 +231,7 @@
 .message-sent {
     float: right;
     clear: both;
-    background-color: green;
+    background-color: #dcf8c6;
     width: 260px;
     padding: 10px 10px;
     margin: 5px 40px;
